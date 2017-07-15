@@ -13,6 +13,7 @@ class TweetInterfaceController: WKInterfaceController {
 
     @IBOutlet var tweetTable: WKInterfaceTable!
     @IBOutlet var loadingLabel: WKInterfaceLabel!
+    @IBOutlet var activityIndicatorGroup: WKInterfaceGroup!
     
     var tweets = [[Tweet]]()
     var hashtag = "360iDev"
@@ -48,6 +49,7 @@ class TweetInterfaceController: WKInterfaceController {
         
         tweetTable.setHidden(true)
         loadingLabel.setHidden(false)
+        startActivityIndicator()
         
         TwitterInterface().requestTwitterSearchResults(hashtag, completion: { (tweets, error) -> Void in
             if error == nil {
@@ -55,6 +57,7 @@ class TweetInterfaceController: WKInterfaceController {
                     
                     self.loadingLabel.setHidden(true)
                     self.tweetTable.setHidden(false)
+                    self.stopActivityIndicator()
                     
                     if let validTweets = tweets {
                         self.tweets.removeAll()
@@ -77,6 +80,16 @@ class TweetInterfaceController: WKInterfaceController {
                 print(error.debugDescription)
             }
         })
+    }
+    
+    func startActivityIndicator() {
+        activityIndicatorGroup.setBackgroundImageNamed("spinner")
+        activityIndicatorGroup?.startAnimatingWithImages(in: NSMakeRange(1,42), duration: 1.5, repeatCount: -1)
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicatorGroup?.stopAnimating()
+        activityIndicatorGroup?.setHidden(true)
     }
 
 }

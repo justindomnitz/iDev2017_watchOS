@@ -51,9 +51,14 @@
             <objects>
                 <controller id="qqx-5K-vOH" customClass="TweetInterfaceController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Loading Tweets..." id="t5u-mo-FHa">
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                        </label>
+                        <group width="1" alignment="left" id="qGV-5t-qU7">
+                            <items>
+                                <label width="102" alignment="center" verticalAlignment="center" text="Folding quarks..." baselineAdjustment="alignCenters" id="0CS-Xr-fjh">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <group width="15" height="15" alignment="center" verticalAlignment="center" backgroundImage="spinner10" id="6bT-xB-FDD"/>
+                            </items>
+                        </group>
                         <table alignment="left" id="bIo-2H-lqQ">
                             <items>
                                 <tableRow identifier="tweetRowController" selectable="NO" id="MUy-r4-gsG" customClass="TweetRowController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
@@ -74,7 +79,8 @@
                         </table>
                     </items>
                     <connections>
-                        <outlet property="loadingLabel" destination="t5u-mo-FHa" id="cy8-br-3X5"/>
+                        <outlet property="activityIndicatorGroup" destination="6bT-xB-FDD" id="Jvd-k8-k4N"/>
+                        <outlet property="loadingLabel" destination="0CS-Xr-fjh" id="AMQ-Ga-OMa"/>
                         <outlet property="tweetTable" destination="bIo-2H-lqQ" id="773-D7-Owl"/>
                     </connections>
                 </controller>
