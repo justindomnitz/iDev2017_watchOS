@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="iDev2017_watchOS" id="sD5-Wh-imS"/>
+                    </items>
+                    <connections>
+                        <segue destination="qqx-5K-vOH" kind="relationship" relationship="nextPage" id="Qdc-91-xRw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Tweet Interface Controller-->
+        <scene sceneID="Gxo-FE-wTK">
+            <objects>
+                <controller id="qqx-5K-vOH" customClass="TweetInterfaceController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Loading Tweets..." id="t5u-mo-FHa">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <table alignment="left" id="bIo-2H-lqQ">
+                            <items>
+                                <tableRow identifier="tweetRowController" selectable="NO" id="MUy-r4-gsG" customClass="TweetRowController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="47" alignment="left" id="gGN-fQ-dve">
+                                        <items>
+                                            <imageView width="33" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="Ggp-GL-yJe"/>
+                                            <label alignment="center" textAlignment="left" numberOfLines="3" id="VaZ-Ib-Jbm">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="tweetImage" destination="Ggp-GL-yJe" id="2ns-ZK-rZp"/>
+                                        <outlet property="tweetLabel" destination="VaZ-Ib-Jbm" id="lVa-nc-ePf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="loadingLabel" destination="t5u-mo-FHa" id="cy8-br-3X5"/>
+                        <outlet property="tweetTable" destination="bIo-2H-lqQ" id="773-D7-Owl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="454" y="345"/>
+        </scene>
+    </scenes>
+</document>
