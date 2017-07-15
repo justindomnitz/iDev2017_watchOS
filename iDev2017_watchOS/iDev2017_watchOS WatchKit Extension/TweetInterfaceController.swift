@@ -83,13 +83,14 @@ class TweetInterfaceController: WKInterfaceController {
     }
     
     func startActivityIndicator() {
+        activityIndicatorGroup.setHidden(false)
         activityIndicatorGroup.setBackgroundImageNamed("spinner")
-        activityIndicatorGroup?.startAnimatingWithImages(in: NSMakeRange(1,42), duration: 1.5, repeatCount: -1)
+        activityIndicatorGroup.startAnimatingWithImages(in: NSMakeRange(1,42), duration: 1.5, repeatCount: -1)
     }
     
     func stopActivityIndicator() {
-        activityIndicatorGroup?.stopAnimating()
-        activityIndicatorGroup?.setHidden(true)
+        activityIndicatorGroup.stopAnimating()
+        activityIndicatorGroup.setHidden(true)
     }
 
 }
