@@ -24,12 +24,17 @@
 		F50C39961F1577B700109767 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50C39951F1577B700109767 /* ComplicationController.swift */; };
 		F50C39981F1577B700109767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50C39971F1577B700109767 /* Assets.xcassets */; };
 		F50C39AE1F157A6400109767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50C395B1F1577B600109767 /* Assets.xcassets */; };
+		F56279261F1CD4A000A1A6E3 /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */; };
 		F57C2B551F1A3E9500501CA6 /* TweetInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */; };
 		F57C2B5A1F1A40E400501CA6 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B571F1A40E400501CA6 /* MediaItem.swift */; };
 		F57C2B5B1F1A40E400501CA6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B581F1A40E400501CA6 /* Tweet.swift */; };
 		F57C2B5C1F1A40E400501CA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B591F1A40E400501CA6 /* User.swift */; };
 		F57C2B5E1F1A40FC00501CA6 /* TwitterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B5D1F1A40FC00501CA6 /* TwitterInterface.swift */; };
 		F57C2B601F1A412C00501CA6 /* TweetRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B5F1F1A412C00501CA6 /* TweetRowController.swift */; };
+		F5DFA5711F1BB62100610567 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA56F1F1BB62100610567 /* libcrypto.a */; };
+		F5DFA5721F1BB62100610567 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA5701F1BB62100610567 /* libssl.a */; };
+		F5DFA5C01F1BB8F100610567 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA56F1F1BB62100610567 /* libcrypto.a */; };
+		F5DFA5C11F1BB8F100610567 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA5701F1BB62100610567 /* libssl.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,12 +119,91 @@
 		F50C39951F1577B700109767 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F50C39971F1577B700109767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50C39991F1577B700109767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtilities.swift; path = Network/NetworkUtilities.swift; sourceTree = "<group>"; };
+		F56279281F1CD59700A1A6E3 /* idev2017-watchOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "idev2017-watchOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetInterfaceController.swift; sourceTree = "<group>"; };
 		F57C2B571F1A40E400501CA6 /* MediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaItem.swift; path = Twitter/MediaItem.swift; sourceTree = "<group>"; };
 		F57C2B581F1A40E400501CA6 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Twitter/Tweet.swift; sourceTree = "<group>"; };
 		F57C2B591F1A40E400501CA6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Twitter/User.swift; sourceTree = "<group>"; };
 		F57C2B5D1F1A40FC00501CA6 /* TwitterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterInterface.swift; path = Twitter/TwitterInterface.swift; sourceTree = "<group>"; };
 		F57C2B5F1F1A412C00501CA6 /* TweetRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetRowController.swift; sourceTree = "<group>"; };
+		F5DFA56F1F1BB62100610567 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = Frameworks/openSSL/lib/libcrypto.a; sourceTree = "<group>"; };
+		F5DFA5701F1BB62100610567 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = Frameworks/openSSL/lib/libssl.a; sourceTree = "<group>"; };
+		F5DFA5751F1BB76B00610567 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes.h; path = Frameworks/openSSL/include/openssl/aes.h; sourceTree = "<group>"; };
+		F5DFA5761F1BB76B00610567 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asn1_mac.h; path = Frameworks/openSSL/include/openssl/asn1_mac.h; sourceTree = "<group>"; };
+		F5DFA5771F1BB76B00610567 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asn1.h; path = Frameworks/openSSL/include/openssl/asn1.h; sourceTree = "<group>"; };
+		F5DFA5781F1BB76B00610567 /* asn1t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asn1t.h; path = Frameworks/openSSL/include/openssl/asn1t.h; sourceTree = "<group>"; };
+		F5DFA5791F1BB76B00610567 /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bio.h; path = Frameworks/openSSL/include/openssl/bio.h; sourceTree = "<group>"; };
+		F5DFA57A1F1BB76B00610567 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blowfish.h; path = Frameworks/openSSL/include/openssl/blowfish.h; sourceTree = "<group>"; };
+		F5DFA57B1F1BB76B00610567 /* bn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bn.h; path = Frameworks/openSSL/include/openssl/bn.h; sourceTree = "<group>"; };
+		F5DFA57C1F1BB76B00610567 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = Frameworks/openSSL/include/openssl/buffer.h; sourceTree = "<group>"; };
+		F5DFA57D1F1BB76B00610567 /* camellia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = camellia.h; path = Frameworks/openSSL/include/openssl/camellia.h; sourceTree = "<group>"; };
+		F5DFA57E1F1BB76B00610567 /* cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cast.h; path = Frameworks/openSSL/include/openssl/cast.h; sourceTree = "<group>"; };
+		F5DFA57F1F1BB76B00610567 /* cmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmac.h; path = Frameworks/openSSL/include/openssl/cmac.h; sourceTree = "<group>"; };
+		F5DFA5801F1BB76B00610567 /* cms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cms.h; path = Frameworks/openSSL/include/openssl/cms.h; sourceTree = "<group>"; };
+		F5DFA5811F1BB76B00610567 /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comp.h; path = Frameworks/openSSL/include/openssl/comp.h; sourceTree = "<group>"; };
+		F5DFA5821F1BB76B00610567 /* conf_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = conf_api.h; path = Frameworks/openSSL/include/openssl/conf_api.h; sourceTree = "<group>"; };
+		F5DFA5831F1BB76B00610567 /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = conf.h; path = Frameworks/openSSL/include/openssl/conf.h; sourceTree = "<group>"; };
+		F5DFA5841F1BB76B00610567 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypto.h; path = Frameworks/openSSL/include/openssl/crypto.h; sourceTree = "<group>"; };
+		F5DFA5851F1BB76B00610567 /* des_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = des_old.h; path = Frameworks/openSSL/include/openssl/des_old.h; sourceTree = "<group>"; };
+		F5DFA5861F1BB76B00610567 /* des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = des.h; path = Frameworks/openSSL/include/openssl/des.h; sourceTree = "<group>"; };
+		F5DFA5871F1BB76B00610567 /* dh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dh.h; path = Frameworks/openSSL/include/openssl/dh.h; sourceTree = "<group>"; };
+		F5DFA5881F1BB76B00610567 /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dsa.h; path = Frameworks/openSSL/include/openssl/dsa.h; sourceTree = "<group>"; };
+		F5DFA5891F1BB76B00610567 /* dso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dso.h; path = Frameworks/openSSL/include/openssl/dso.h; sourceTree = "<group>"; };
+		F5DFA58A1F1BB76B00610567 /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dtls1.h; path = Frameworks/openSSL/include/openssl/dtls1.h; sourceTree = "<group>"; };
+		F5DFA58B1F1BB76B00610567 /* e_os2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = e_os2.h; path = Frameworks/openSSL/include/openssl/e_os2.h; sourceTree = "<group>"; };
+		F5DFA58C1F1BB76B00610567 /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ebcdic.h; path = Frameworks/openSSL/include/openssl/ebcdic.h; sourceTree = "<group>"; };
+		F5DFA58D1F1BB76B00610567 /* ec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ec.h; path = Frameworks/openSSL/include/openssl/ec.h; sourceTree = "<group>"; };
+		F5DFA58E1F1BB76B00610567 /* ecdh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ecdh.h; path = Frameworks/openSSL/include/openssl/ecdh.h; sourceTree = "<group>"; };
+		F5DFA58F1F1BB76B00610567 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ecdsa.h; path = Frameworks/openSSL/include/openssl/ecdsa.h; sourceTree = "<group>"; };
+		F5DFA5901F1BB76B00610567 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = engine.h; path = Frameworks/openSSL/include/openssl/engine.h; sourceTree = "<group>"; };
+		F5DFA5911F1BB76B00610567 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = err.h; path = Frameworks/openSSL/include/openssl/err.h; sourceTree = "<group>"; };
+		F5DFA5921F1BB76B00610567 /* evp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = evp.h; path = Frameworks/openSSL/include/openssl/evp.h; sourceTree = "<group>"; };
+		F5DFA5931F1BB76B00610567 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = Frameworks/openSSL/include/openssl/hmac.h; sourceTree = "<group>"; };
+		F5DFA5941F1BB76B00610567 /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = idea.h; path = Frameworks/openSSL/include/openssl/idea.h; sourceTree = "<group>"; };
+		F5DFA5951F1BB76B00610567 /* krb5_asn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = krb5_asn.h; path = Frameworks/openSSL/include/openssl/krb5_asn.h; sourceTree = "<group>"; };
+		F5DFA5961F1BB76B00610567 /* kssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kssl.h; path = Frameworks/openSSL/include/openssl/kssl.h; sourceTree = "<group>"; };
+		F5DFA5971F1BB76B00610567 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lhash.h; path = Frameworks/openSSL/include/openssl/lhash.h; sourceTree = "<group>"; };
+		F5DFA5981F1BB76B00610567 /* md4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md4.h; path = Frameworks/openSSL/include/openssl/md4.h; sourceTree = "<group>"; };
+		F5DFA5991F1BB76B00610567 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5.h; path = Frameworks/openSSL/include/openssl/md5.h; sourceTree = "<group>"; };
+		F5DFA59A1F1BB76B00610567 /* mdc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mdc2.h; path = Frameworks/openSSL/include/openssl/mdc2.h; sourceTree = "<group>"; };
+		F5DFA59B1F1BB76B00610567 /* modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = modes.h; path = Frameworks/openSSL/include/openssl/modes.h; sourceTree = "<group>"; };
+		F5DFA59C1F1BB76B00610567 /* obj_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obj_mac.h; path = Frameworks/openSSL/include/openssl/obj_mac.h; sourceTree = "<group>"; };
+		F5DFA59D1F1BB76B00610567 /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objects.h; path = Frameworks/openSSL/include/openssl/objects.h; sourceTree = "<group>"; };
+		F5DFA59E1F1BB76B00610567 /* ocsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ocsp.h; path = Frameworks/openSSL/include/openssl/ocsp.h; sourceTree = "<group>"; };
+		F5DFA59F1F1BB76B00610567 /* opensslconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opensslconf.h; path = Frameworks/openSSL/include/openssl/opensslconf.h; sourceTree = "<group>"; };
+		F5DFA5A01F1BB76B00610567 /* opensslv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opensslv.h; path = Frameworks/openSSL/include/openssl/opensslv.h; sourceTree = "<group>"; };
+		F5DFA5A11F1BB76B00610567 /* ossl_typ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ossl_typ.h; path = Frameworks/openSSL/include/openssl/ossl_typ.h; sourceTree = "<group>"; };
+		F5DFA5A21F1BB76B00610567 /* pem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pem.h; path = Frameworks/openSSL/include/openssl/pem.h; sourceTree = "<group>"; };
+		F5DFA5A31F1BB76B00610567 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pem2.h; path = Frameworks/openSSL/include/openssl/pem2.h; sourceTree = "<group>"; };
+		F5DFA5A41F1BB76B00610567 /* pkcs7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs7.h; path = Frameworks/openSSL/include/openssl/pkcs7.h; sourceTree = "<group>"; };
+		F5DFA5A51F1BB76B00610567 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs12.h; path = Frameworks/openSSL/include/openssl/pkcs12.h; sourceTree = "<group>"; };
+		F5DFA5A61F1BB76B00610567 /* pqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pqueue.h; path = Frameworks/openSSL/include/openssl/pqueue.h; sourceTree = "<group>"; };
+		F5DFA5A71F1BB76B00610567 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rand.h; path = Frameworks/openSSL/include/openssl/rand.h; sourceTree = "<group>"; };
+		F5DFA5A81F1BB76B00610567 /* rc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rc2.h; path = Frameworks/openSSL/include/openssl/rc2.h; sourceTree = "<group>"; };
+		F5DFA5A91F1BB76B00610567 /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rc4.h; path = Frameworks/openSSL/include/openssl/rc4.h; sourceTree = "<group>"; };
+		F5DFA5AA1F1BB76B00610567 /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ripemd.h; path = Frameworks/openSSL/include/openssl/ripemd.h; sourceTree = "<group>"; };
+		F5DFA5AB1F1BB76B00610567 /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rsa.h; path = Frameworks/openSSL/include/openssl/rsa.h; sourceTree = "<group>"; };
+		F5DFA5AC1F1BB76B00610567 /* safestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = safestack.h; path = Frameworks/openSSL/include/openssl/safestack.h; sourceTree = "<group>"; };
+		F5DFA5AD1F1BB76B00610567 /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seed.h; path = Frameworks/openSSL/include/openssl/seed.h; sourceTree = "<group>"; };
+		F5DFA5AE1F1BB76B00610567 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha.h; path = Frameworks/openSSL/include/openssl/sha.h; sourceTree = "<group>"; };
+		F5DFA5AF1F1BB76B00610567 /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srp.h; path = Frameworks/openSSL/include/openssl/srp.h; sourceTree = "<group>"; };
+		F5DFA5B01F1BB76B00610567 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srtp.h; path = Frameworks/openSSL/include/openssl/srtp.h; sourceTree = "<group>"; };
+		F5DFA5B11F1BB76B00610567 /* ssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ssl.h; path = Frameworks/openSSL/include/openssl/ssl.h; sourceTree = "<group>"; };
+		F5DFA5B21F1BB76B00610567 /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ssl2.h; path = Frameworks/openSSL/include/openssl/ssl2.h; sourceTree = "<group>"; };
+		F5DFA5B31F1BB76B00610567 /* ssl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ssl3.h; path = Frameworks/openSSL/include/openssl/ssl3.h; sourceTree = "<group>"; };
+		F5DFA5B41F1BB76B00610567 /* ssl23.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ssl23.h; path = Frameworks/openSSL/include/openssl/ssl23.h; sourceTree = "<group>"; };
+		F5DFA5B51F1BB76B00610567 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = Frameworks/openSSL/include/openssl/stack.h; sourceTree = "<group>"; };
+		F5DFA5B61F1BB76B00610567 /* symhacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = symhacks.h; path = Frameworks/openSSL/include/openssl/symhacks.h; sourceTree = "<group>"; };
+		F5DFA5B71F1BB76B00610567 /* tls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tls1.h; path = Frameworks/openSSL/include/openssl/tls1.h; sourceTree = "<group>"; };
+		F5DFA5B81F1BB76B00610567 /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ts.h; path = Frameworks/openSSL/include/openssl/ts.h; sourceTree = "<group>"; };
+		F5DFA5B91F1BB76B00610567 /* txt_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = txt_db.h; path = Frameworks/openSSL/include/openssl/txt_db.h; sourceTree = "<group>"; };
+		F5DFA5BA1F1BB76B00610567 /* ui_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_compat.h; path = Frameworks/openSSL/include/openssl/ui_compat.h; sourceTree = "<group>"; };
+		F5DFA5BB1F1BB76B00610567 /* ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui.h; path = Frameworks/openSSL/include/openssl/ui.h; sourceTree = "<group>"; };
+		F5DFA5BC1F1BB76B00610567 /* whrlpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = whrlpool.h; path = Frameworks/openSSL/include/openssl/whrlpool.h; sourceTree = "<group>"; };
+		F5DFA5BD1F1BB76B00610567 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x509_vfy.h; path = Frameworks/openSSL/include/openssl/x509_vfy.h; sourceTree = "<group>"; };
+		F5DFA5BE1F1BB76C00610567 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x509.h; path = Frameworks/openSSL/include/openssl/x509.h; sourceTree = "<group>"; };
+		F5DFA5BF1F1BB76C00610567 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x509v3.h; path = Frameworks/openSSL/include/openssl/x509v3.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +211,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DFA5721F1BB62100610567 /* libssl.a in Frameworks */,
+				F5DFA5711F1BB62100610567 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +234,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DFA5C11F1BB8F100610567 /* libssl.a in Frameworks */,
+				F5DFA5C01F1BB8F100610567 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +275,7 @@
 				F50C395B1F1577B600109767 /* Assets.xcassets */,
 				F50C395D1F1577B600109767 /* LaunchScreen.storyboard */,
 				F50C39601F1577B600109767 /* Info.plist */,
+				F57C2B621F1B985C00501CA6 /* Frameworks */,
 			);
 			path = iDev2017_watchOS;
 			sourceTree = "<group>";
@@ -228,9 +317,9 @@
 				F50C39951F1577B700109767 /* ComplicationController.swift */,
 				F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */,
 				F57C2B5F1F1A412C00501CA6 /* TweetRowController.swift */,
-				F50C39971F1577B700109767 /* Assets.xcassets */,
-				F50C39991F1577B700109767 /* Info.plist */,
+				F56279271F1CD58100A1A6E3 /* Supporting Files */,
 				F57C2B561F1A40AE00501CA6 /* Twitter */,
+				F56279241F1CD46F00A1A6E3 /* Network */,
 				F50C398D1F1577B700109767 /* Supporting Files */,
 			);
 			path = "iDev2017_watchOS WatchKit Extension";
@@ -244,6 +333,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F56279241F1CD46F00A1A6E3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		F56279271F1CD58100A1A6E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F56279281F1CD59700A1A6E3 /* idev2017-watchOS-Bridging-Header.h */,
+				F50C39971F1577B700109767 /* Assets.xcassets */,
+				F50C39991F1577B700109767 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F57C2B561F1A40AE00501CA6 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +360,122 @@
 				F57C2B591F1A40E400501CA6 /* User.swift */,
 			);
 			name = Twitter;
+			sourceTree = "<group>";
+		};
+		F57C2B621F1B985C00501CA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F57C2B671F1B98EC00501CA6 /* openSSL */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F57C2B671F1B98EC00501CA6 /* openSSL */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFA5731F1BB6E800610567 /* include */,
+				F5DFA56E1F1BB5FA00610567 /* lib */,
+			);
+			name = openSSL;
+			sourceTree = "<group>";
+		};
+		F5DFA56E1F1BB5FA00610567 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFA56F1F1BB62100610567 /* libcrypto.a */,
+				F5DFA5701F1BB62100610567 /* libssl.a */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		F5DFA5731F1BB6E800610567 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFA5741F1BB71500610567 /* openssl */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		F5DFA5741F1BB71500610567 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFA5751F1BB76B00610567 /* aes.h */,
+				F5DFA5761F1BB76B00610567 /* asn1_mac.h */,
+				F5DFA5771F1BB76B00610567 /* asn1.h */,
+				F5DFA5781F1BB76B00610567 /* asn1t.h */,
+				F5DFA5791F1BB76B00610567 /* bio.h */,
+				F5DFA57A1F1BB76B00610567 /* blowfish.h */,
+				F5DFA57B1F1BB76B00610567 /* bn.h */,
+				F5DFA57C1F1BB76B00610567 /* buffer.h */,
+				F5DFA57D1F1BB76B00610567 /* camellia.h */,
+				F5DFA57E1F1BB76B00610567 /* cast.h */,
+				F5DFA57F1F1BB76B00610567 /* cmac.h */,
+				F5DFA5801F1BB76B00610567 /* cms.h */,
+				F5DFA5811F1BB76B00610567 /* comp.h */,
+				F5DFA5821F1BB76B00610567 /* conf_api.h */,
+				F5DFA5831F1BB76B00610567 /* conf.h */,
+				F5DFA5841F1BB76B00610567 /* crypto.h */,
+				F5DFA5851F1BB76B00610567 /* des_old.h */,
+				F5DFA5861F1BB76B00610567 /* des.h */,
+				F5DFA5871F1BB76B00610567 /* dh.h */,
+				F5DFA5881F1BB76B00610567 /* dsa.h */,
+				F5DFA5891F1BB76B00610567 /* dso.h */,
+				F5DFA58A1F1BB76B00610567 /* dtls1.h */,
+				F5DFA58B1F1BB76B00610567 /* e_os2.h */,
+				F5DFA58C1F1BB76B00610567 /* ebcdic.h */,
+				F5DFA58D1F1BB76B00610567 /* ec.h */,
+				F5DFA58E1F1BB76B00610567 /* ecdh.h */,
+				F5DFA58F1F1BB76B00610567 /* ecdsa.h */,
+				F5DFA5901F1BB76B00610567 /* engine.h */,
+				F5DFA5911F1BB76B00610567 /* err.h */,
+				F5DFA5921F1BB76B00610567 /* evp.h */,
+				F5DFA5931F1BB76B00610567 /* hmac.h */,
+				F5DFA5941F1BB76B00610567 /* idea.h */,
+				F5DFA5951F1BB76B00610567 /* krb5_asn.h */,
+				F5DFA5961F1BB76B00610567 /* kssl.h */,
+				F5DFA5971F1BB76B00610567 /* lhash.h */,
+				F5DFA5981F1BB76B00610567 /* md4.h */,
+				F5DFA5991F1BB76B00610567 /* md5.h */,
+				F5DFA59A1F1BB76B00610567 /* mdc2.h */,
+				F5DFA59B1F1BB76B00610567 /* modes.h */,
+				F5DFA59C1F1BB76B00610567 /* obj_mac.h */,
+				F5DFA59D1F1BB76B00610567 /* objects.h */,
+				F5DFA59E1F1BB76B00610567 /* ocsp.h */,
+				F5DFA59F1F1BB76B00610567 /* opensslconf.h */,
+				F5DFA5A01F1BB76B00610567 /* opensslv.h */,
+				F5DFA5A11F1BB76B00610567 /* ossl_typ.h */,
+				F5DFA5A21F1BB76B00610567 /* pem.h */,
+				F5DFA5A31F1BB76B00610567 /* pem2.h */,
+				F5DFA5A41F1BB76B00610567 /* pkcs7.h */,
+				F5DFA5A51F1BB76B00610567 /* pkcs12.h */,
+				F5DFA5A61F1BB76B00610567 /* pqueue.h */,
+				F5DFA5A71F1BB76B00610567 /* rand.h */,
+				F5DFA5A81F1BB76B00610567 /* rc2.h */,
+				F5DFA5A91F1BB76B00610567 /* rc4.h */,
+				F5DFA5AA1F1BB76B00610567 /* ripemd.h */,
+				F5DFA5AB1F1BB76B00610567 /* rsa.h */,
+				F5DFA5AC1F1BB76B00610567 /* safestack.h */,
+				F5DFA5AD1F1BB76B00610567 /* seed.h */,
+				F5DFA5AE1F1BB76B00610567 /* sha.h */,
+				F5DFA5AF1F1BB76B00610567 /* srp.h */,
+				F5DFA5B01F1BB76B00610567 /* srtp.h */,
+				F5DFA5B11F1BB76B00610567 /* ssl.h */,
+				F5DFA5B21F1BB76B00610567 /* ssl2.h */,
+				F5DFA5B31F1BB76B00610567 /* ssl3.h */,
+				F5DFA5B41F1BB76B00610567 /* ssl23.h */,
+				F5DFA5B51F1BB76B00610567 /* stack.h */,
+				F5DFA5B61F1BB76B00610567 /* symhacks.h */,
+				F5DFA5B71F1BB76B00610567 /* tls1.h */,
+				F5DFA5B81F1BB76B00610567 /* ts.h */,
+				F5DFA5B91F1BB76B00610567 /* txt_db.h */,
+				F5DFA5BA1F1BB76B00610567 /* ui_compat.h */,
+				F5DFA5BB1F1BB76B00610567 /* ui.h */,
+				F5DFA5BC1F1BB76B00610567 /* whrlpool.h */,
+				F5DFA5BD1F1BB76B00610567 /* x509_vfy.h */,
+				F5DFA5BE1F1BB76C00610567 /* x509.h */,
+				F5DFA5BF1F1BB76C00610567 /* x509v3.h */,
+			);
+			name = openssl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +710,7 @@
 				F50C39941F1577B700109767 /* NotificationController.swift in Sources */,
 				F50C39961F1577B700109767 /* ComplicationController.swift in Sources */,
 				F50C39921F1577B700109767 /* ExtensionDelegate.swift in Sources */,
+				F56279261F1CD4A000A1A6E3 /* NetworkUtilities.swift in Sources */,
 				F57C2B5B1F1A40E400501CA6 /* Tweet.swift in Sources */,
 				F57C2B5E1F1A40FC00501CA6 /* TwitterInterface.swift in Sources */,
 				F57C2B5C1F1A40E400501CA6 /* User.swift in Sources */,
@@ -651,10 +875,16 @@
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = "iDev2017_watchOS WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iDev2017_watchOS WatchKit Extension/idev2017-watchOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
@@ -668,10 +898,16 @@
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = "iDev2017_watchOS WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iDev2017_watchOS WatchKit Extension/idev2017-watchOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
@@ -721,6 +957,11 @@
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = iDev2017_watchOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -734,6 +975,11 @@
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = iDev2017_watchOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL",
+					"$(PROJECT_DIR)/iDev2017_watchOS/Frameworks/openSSL/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
