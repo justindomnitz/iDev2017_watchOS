@@ -15,6 +15,10 @@ public class NetworkUtilities: NSObject, URLSessionTaskDelegate {
     
     // MARK: Public Key Pinning Functions
     
+    open func downloadTask(with: URL) {
+        //to do
+    }
+    
     open func sendRequest(_ request:URLRequest, completion: @escaping (_ json: AnyObject?, _ data: Data?, _ response: HTTPURLResponse?, _ error: NSError?) -> Void) {
         
         let sessionConfig = URLSessionConfiguration.ephemeral
