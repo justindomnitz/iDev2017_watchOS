@@ -62,6 +62,6 @@ public struct User: CustomStringConvertible
         static let ScreenName = "screen_name"
         static let ID = "id_str"
         static let Verified = "verified"
-        static let ProfileImageURL = "profile_image_url"
+        static let ProfileImageURL = "profile_image_url_https"
     }
 }

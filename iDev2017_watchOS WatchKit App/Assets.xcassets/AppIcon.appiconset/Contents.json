@@ -3,6 +3,7 @@
     {
       "size" : "24x24",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate.jpg",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
@@ -10,6 +11,7 @@
     {
       "size" : "27.5x27.5",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate-1.jpg",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "42mm"
@@ -17,18 +19,21 @@
     {
       "size" : "29x29",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate-2.jpg",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate-3.jpg",
       "role" : "companionSettings",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate-4.jpg",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -36,6 +41,7 @@
     {
       "size" : "86x86",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate-5.jpg",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "38mm"
@@ -43,9 +49,16 @@
     {
       "size" : "98x98",
       "idiom" : "watch",
+      "filename" : "Sticker-nodate-6.jpg",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "watch-marketing",
+      "filename" : "Sticker-nodate-7.jpg",
+      "scale" : "1x"
     }
   ],
   "info" : {
