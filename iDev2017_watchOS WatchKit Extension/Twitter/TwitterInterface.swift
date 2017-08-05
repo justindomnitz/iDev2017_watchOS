@@ -44,13 +44,6 @@ class TwitterInterface {
         
         print("\(serviceUrl)")
         
-        do {
-            print(try serviceUrl.checkResourceIsReachable())
-        }
-        catch let caught {
-            print(caught)
-        }
-        
         let _ = session.uploadTask(with: request, from: theData,  completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print("Twitter returned error: \(error!.localizedDescription); \(error!)")

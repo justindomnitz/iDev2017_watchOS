@@ -353,8 +353,7 @@
 			children = (
 				F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */,
 			);
-			name = Network;
-			path = "iDev2017_watchOS WatchKit Extension";
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F56279271F1CD58100A1A6E3 /* Supporting Files */ = {
