@@ -37,14 +37,20 @@ class TwitterInterface {
         
         let session = URLSession(configuration: sessionConfig)
         let serviceUrl = URL(string:"https://api.twitter.com/oauth2/token")!
-        var request = URLRequest(url: serviceUrl)  //NSMutableURLRequest.init(url: serviceUrl!)
+        var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
         let dataString = "grant_type=client_credentials"
         let theData = dataString.data(using: String.Encoding.ascii, allowLossyConversion: true)
         
         print("\(serviceUrl)")
         
-        //CFANetworkUtilities().sendRequest(request, completion: { (any, data, response, error) -> Void in
+        do {
+            print(try serviceUrl.checkResourceIsReachable())
+        }
+        catch let caught {
+            print(caught)
+        }
+        
         let _ = session.uploadTask(with: request, from: theData,  completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print("Twitter returned error: \(error!.localizedDescription); \(error!)")

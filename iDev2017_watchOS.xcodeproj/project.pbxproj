@@ -25,6 +25,9 @@
 		F50C39981F1577B700109767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50C39971F1577B700109767 /* Assets.xcassets */; };
 		F50C39AE1F157A6400109767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50C395B1F1577B600109767 /* Assets.xcassets */; };
 		F56279261F1CD4A000A1A6E3 /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */; };
+		F570139B1F362A440008328F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F57013991F362A440008328F /* Reachability.m */; };
+		F570139D1F362B540008328F /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */; };
+		F57013A21F362C110008328F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57013A11F362C110008328F /* SystemConfiguration.framework */; };
 		F57C2B551F1A3E9500501CA6 /* TweetInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */; };
 		F57C2B5A1F1A40E400501CA6 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B571F1A40E400501CA6 /* MediaItem.swift */; };
 		F57C2B5B1F1A40E400501CA6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B581F1A40E400501CA6 /* Tweet.swift */; };
@@ -119,8 +122,12 @@
 		F50C39951F1577B700109767 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F50C39971F1577B700109767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50C39991F1577B700109767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtilities.swift; path = Network/NetworkUtilities.swift; sourceTree = "<group>"; };
+		F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtilities.swift; path = ../Network/NetworkUtilities.swift; sourceTree = "<group>"; };
 		F56279281F1CD59700A1A6E3 /* idev2017-watchOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "idev2017-watchOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		F57013991F362A440008328F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F570139A1F362A440008328F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F570139E1F362B740008328F /* iDev2017_watchOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "iDev2017_watchOS-Bridging-Header.h"; path = "iDev2017_watchOS/iDev2017_watchOS-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		F57013A11F362C110008328F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetInterfaceController.swift; sourceTree = "<group>"; };
 		F57C2B571F1A40E400501CA6 /* MediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaItem.swift; path = Twitter/MediaItem.swift; sourceTree = "<group>"; };
 		F57C2B581F1A40E400501CA6 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Twitter/Tweet.swift; sourceTree = "<group>"; };
@@ -211,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57013A21F362C110008328F /* SystemConfiguration.framework in Frameworks */,
 				F5DFA5721F1BB62100610567 /* libssl.a in Frameworks */,
 				F5DFA5711F1BB62100610567 /* libcrypto.a in Frameworks */,
 			);
@@ -239,18 +247,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F57013A51F362D260008328F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F50C39481F1577B600109767 = {
 			isa = PBXGroup;
 			children = (
+				F57013971F362A1F0008328F /* Shared */,
 				F50C39531F1577B600109767 /* iDev2017_watchOS */,
 				F50C39681F1577B600109767 /* iDev2017_watchOSTests */,
 				F50C39731F1577B700109767 /* iDev2017_watchOSUITests */,
 				F50C397D1F1577B700109767 /* iDev2017_watchOS WatchKit App */,
 				F50C398C1F1577B700109767 /* iDev2017_watchOS WatchKit Extension */,
 				F50C39521F1577B600109767 /* Products */,
+				F57013A01F362C110008328F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,9 +289,8 @@
 				F50C39541F1577B600109767 /* AppDelegate.swift */,
 				F50C39561F1577B600109767 /* ViewController.swift */,
 				F50C39581F1577B600109767 /* Main.storyboard */,
-				F50C395B1F1577B600109767 /* Assets.xcassets */,
 				F50C395D1F1577B600109767 /* LaunchScreen.storyboard */,
-				F50C39601F1577B600109767 /* Info.plist */,
+				F570139F1F362BB30008328F /* Supporting Files */,
 				F57C2B621F1B985C00501CA6 /* Frameworks */,
 			);
 			path = iDev2017_watchOS;
@@ -319,7 +335,6 @@
 				F57C2B5F1F1A412C00501CA6 /* TweetRowController.swift */,
 				F56279271F1CD58100A1A6E3 /* Supporting Files */,
 				F57C2B561F1A40AE00501CA6 /* Twitter */,
-				F56279241F1CD46F00A1A6E3 /* Network */,
 				F50C398D1F1577B700109767 /* Supporting Files */,
 			);
 			path = "iDev2017_watchOS WatchKit Extension";
@@ -339,6 +354,7 @@
 				F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */,
 			);
 			name = Network;
+			path = "iDev2017_watchOS WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		F56279271F1CD58100A1A6E3 /* Supporting Files */ = {
@@ -349,6 +365,34 @@
 				F50C39991F1577B700109767 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F57013971F362A1F0008328F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F570139A1F362A440008328F /* Reachability.h */,
+				F57013991F362A440008328F /* Reachability.m */,
+				F56279241F1CD46F00A1A6E3 /* Network */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F570139F1F362BB30008328F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F570139E1F362B740008328F /* iDev2017_watchOS-Bridging-Header.h */,
+				F50C395B1F1577B600109767 /* Assets.xcassets */,
+				F50C39601F1577B600109767 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F57013A01F362C110008328F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F57013A11F362C110008328F /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F57C2B561F1A40AE00501CA6 /* Twitter */ = {
@@ -542,6 +586,7 @@
 			buildPhases = (
 				F50C39771F1577B700109767 /* Resources */,
 				F50C399F1F1577B700109767 /* Embed App Extensions */,
+				F57013A51F362D260008328F /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -687,7 +732,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50C39571F1577B600109767 /* ViewController.swift in Sources */,
+				F570139B1F362A440008328F /* Reachability.m in Sources */,
 				F50C39551F1577B600109767 /* AppDelegate.swift in Sources */,
+				F570139D1F362B540008328F /* NetworkUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +878,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -880,6 +928,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -902,7 +951,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "iDev2017_watchOS WatchKit Extension/idev2017-watchOS-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
@@ -926,7 +975,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "iDev2017_watchOS WatchKit Extension/idev2017-watchOS-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
@@ -941,6 +990,7 @@
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				IBSC_MODULE = iDev2017_watchOS_WatchKit_Extension;
 				INFOPLIST_FILE = "iDev2017_watchOS WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -960,6 +1010,7 @@
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				IBSC_MODULE = iDev2017_watchOS_WatchKit_Extension;
 				INFOPLIST_FILE = "iDev2017_watchOS WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -975,6 +1026,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = iDev2017_watchOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -985,7 +1037,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_OBJC_BRIDGING_HEADER = "iDev2017_watchOS/iDev2017_watchOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -994,6 +1048,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = iDev2017_watchOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1004,7 +1059,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_OBJC_BRIDGING_HEADER = "iDev2017_watchOS/iDev2017_watchOS-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1019,7 +1075,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDev2017_watchOS.app/iDev2017_watchOS";
 			};
@@ -1035,7 +1091,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDev2017_watchOS.app/iDev2017_watchOS";
 			};
@@ -1050,7 +1106,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = iDev2017_watchOS;
 			};
@@ -1065,7 +1121,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowyoyo.iDev2017-watchOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = iDev2017_watchOS;
 			};

@@ -7,11 +7,38 @@
 //
 
 import Foundation
+#if os(iOS)
+    import SystemConfiguration
+#elseif os(watchOS)
+    // Exclude SystemConfiguration framework
+#endif
 
 public class NetworkUtilities: NSObject, URLSessionTaskDelegate {
     
     let openSSLPublicKeyLength = 767
     let openSSLPublicKeyPrefix = "30 82 01 0A 02 82 01 01 00 "
+    
+    // MARK: Client app networking functions
+    
+#if os(iOS)
+    @objc public static func isConnectedToNetwork() -> Bool {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                SCNetworkReachabilityCreateWithAddress(nil, $0)
+            }
+        }
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
+#endif
     
     // MARK: Public Key Pinning Functions
     
