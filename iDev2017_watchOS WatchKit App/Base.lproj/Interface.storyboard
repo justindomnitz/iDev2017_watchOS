@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13168.3" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13042.2"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -65,14 +65,14 @@
                                     <group key="rootItem" width="1" height="47" alignment="left" id="gGN-fQ-dve">
                                         <items>
                                             <imageView width="33" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="Ggp-GL-yJe"/>
-                                            <label alignment="center" textAlignment="left" numberOfLines="3" id="VaZ-Ib-Jbm">
+                                            <label width="79" height="60" alignment="right" text="This is a test to see how much text can fit." numberOfLines="3" id="CuE-Wv-LOO">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="tweetImage" destination="Ggp-GL-yJe" id="2ns-ZK-rZp"/>
-                                        <outlet property="tweetLabel" destination="VaZ-Ib-Jbm" id="lVa-nc-ePf"/>
+                                        <outlet property="tweetLabel" destination="CuE-Wv-LOO" id="3hK-e1-Bwa"/>
                                     </connections>
                                 </tableRow>
                             </items>
