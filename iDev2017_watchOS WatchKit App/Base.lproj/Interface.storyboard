@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="iDev2017_watchOS" id="sD5-Wh-imS"/>
+                        <label alignment="left" text="Hello, Westeros!" id="sD5-Wh-imS"/>
                     </items>
                     <connections>
                         <segue destination="qqx-5K-vOH" kind="relationship" relationship="nextPage" id="Qdc-91-xRw"/>
@@ -53,7 +53,7 @@
                     <items>
                         <group width="1" alignment="left" id="qGV-5t-qU7">
                             <items>
-                                <label width="102" alignment="center" verticalAlignment="center" text="Folding quarks..." baselineAdjustment="alignCenters" id="0CS-Xr-fjh">
+                                <label width="102" alignment="center" verticalAlignment="center" text="Hatch dragons..." baselineAdjustment="alignCenters" id="0CS-Xr-fjh">
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                 </label>
                                 <group width="15" height="15" alignment="center" verticalAlignment="center" backgroundImage="spinner10" id="6bT-xB-FDD"/>
