@@ -63,6 +63,7 @@ class TweetInterfaceController: WKInterfaceController {
         startActivityIndicator()
         
         //Static data.
+        /*
         delay(1) {
             var validTweets = [Tweet]()
             
@@ -94,9 +95,9 @@ class TweetInterfaceController: WKInterfaceController {
                 }
             }
         }
+        */
         
         //Data from server.
-        /*
         TwitterInterface().requestTwitterSearchResults(hashtag, completion: { (tweets, error) -> Void in
             if error == nil {
                 DispatchQueue.main.async {
@@ -112,11 +113,11 @@ class TweetInterfaceController: WKInterfaceController {
                         for (index, tweet) in validTweets.enumerated() {
                             if let row = self.tweetTable.rowController(at: index) as? TweetRowController {
                                 row.tweetLabel.setText(tweet.text)
-//                                if let profileImageURL = tweet.user.profileImageURL {
-//                                    if let imageData = try? Data(contentsOf: profileImageURL as URL) { // TO-DO: blocks main thread!
-//                                        row.tweetImage.setImage(UIImage(data: imageData))
-//                                    }
-//                                }
+                                if let profileImageURL = tweet.user.profileImageURL {
+                                    if let imageData = try? Data(contentsOf: profileImageURL as URL) { // TO-DO: blocks main thread!
+                                        row.tweetImage.setImage(UIImage(data: imageData))
+                                    }
+                                }
                             }
                         }
                     }
@@ -126,7 +127,6 @@ class TweetInterfaceController: WKInterfaceController {
                 print(error.debugDescription)
             }
         })
-        */
         
     }
     
