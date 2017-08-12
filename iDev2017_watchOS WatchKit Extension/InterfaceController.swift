@@ -13,23 +13,27 @@ import UserNotifications
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate {
 
     override func awake(withContext context: Any?) {
+        print("InterfaceController - \(#function)")
         super.awake(withContext: context)
         
         // Configure interface objects here.
     }
     
     override func willActivate() {
+        print("InterfaceController - \(#function)")
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
     override func didDeactivate() {
+        print("InterfaceController - \(#function)")
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 
     @available(watchOSApplicationExtension 4.0, *)
     @IBAction func orderButtonPressed() {
+        print("InterfaceController - \(#function)")
         let orderPostURL = URL(string: "https://www.google.com/")!
         
         let session = NetworkUtilities() //.backgroundSession
@@ -41,11 +45,13 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
     func triggerFallbackLocalNotification() {
+        print("InterfaceController - \(#function)")
         //to do
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,
                                          withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("InterfaceController - \(#function)")
         cancelFallbackNotifications()
         if #available(watchOSApplicationExtension 4.0, *) {
             WKInterfaceController.reloadRootPageControllers(withNames: ["cookingController"],
@@ -58,10 +64,12 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
     func cancelFallbackNotifications() {
+        print("InterfaceController - \(#function)")
         // to do
     }
     
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
+        print("InterfaceController - \(#function)")
         let fireDate = Date()
         
         for task in backgroundTasks {
