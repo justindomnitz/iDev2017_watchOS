@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13168.3" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13178.6" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13042.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13045"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,9 +14,13 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Hello, Westeros!" id="sD5-Wh-imS"/>
+                        <label width="136" alignment="left" text="Why hidden?" textAlignment="center" id="MQg-hV-jYb"/>
+                        <label width="136" alignment="left" text="Hello, Westeros!" textAlignment="center" id="sD5-Wh-imS"/>
+                        <imageView alignment="left" image="Dragonstone" contentMode="scaleAspectFit" id="Owz-0p-DCa"/>
                     </items>
                     <connections>
+                        <outlet property="titleImageView" destination="Owz-0p-DCa" id="pxX-gC-0OW"/>
+                        <outlet property="titleLabel" destination="sD5-Wh-imS" id="tJl-Pg-Vdz"/>
                         <segue destination="qqx-5K-vOH" kind="relationship" relationship="nextPage" id="Qdc-91-xRw"/>
                     </connections>
                 </controller>
@@ -51,6 +55,7 @@
             <objects>
                 <controller id="qqx-5K-vOH" customClass="TweetInterfaceController" customModule="iDev2017_watchOS_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label width="136" alignment="left" text="Why hidden?" textAlignment="center" id="jMS-wY-190"/>
                         <group width="1" alignment="left" id="qGV-5t-qU7">
                             <items>
                                 <label width="102" alignment="center" verticalAlignment="center" text="Hatch dragons..." baselineAdjustment="alignCenters" id="0CS-Xr-fjh">
@@ -82,10 +87,29 @@
                         <outlet property="activityIndicatorGroup" destination="6bT-xB-FDD" id="Jvd-k8-k4N"/>
                         <outlet property="loadingLabel" destination="0CS-Xr-fjh" id="AMQ-Ga-OMa"/>
                         <outlet property="tweetTable" destination="bIo-2H-lqQ" id="773-D7-Owl"/>
+                        <segue destination="lnF-xD-IcF" kind="relationship" relationship="nextPage" id="91g-1l-fc2"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="454" y="345"/>
+        </scene>
+        <!--Whitewalker Interface Controller-->
+        <scene sceneID="Rbe-2O-aBD">
+            <objects>
+                <controller id="lnF-xD-IcF" customClass="WhitewalkerInterfaceController" customModule="iDev2017_watchOS_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Why hidden?" textAlignment="center" id="I90-G3-7Z7"/>
+                        <label width="136" alignment="left" text="Whitewalker Radar" textAlignment="center" id="RcJ-Kn-i4P">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <imageView alignment="left" image="ic_leak_add_white_48dp" contentMode="scaleAspectFit" id="xY6-VX-6cl"/>
+                    </items>
+                    <connections>
+                        <outlet property="radarImageView" destination="xY6-VX-6cl" id="ZKk-Nc-25s"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="684" y="345"/>
         </scene>
     </scenes>
 </document>

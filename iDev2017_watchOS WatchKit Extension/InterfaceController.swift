@@ -12,6 +12,9 @@ import UserNotifications
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate {
 
+    @IBOutlet var titleLabel: WKInterfaceLabel!
+    @IBOutlet var titleImageView: WKInterfaceImage!
+    
     override func awake(withContext context: Any?) {
         print("InterfaceController - \(#function)")
         super.awake(withContext: context)
@@ -23,6 +26,14 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         print("InterfaceController - \(#function)")
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+    }
+    
+    override func didAppear() {
+        print("InterfaceController - \(#function)")
+        super.didAppear()
+        
+        titleLabel.setText("Hello, Fleabottom!")
+        titleImageView.setImage(UIImage(named: "Dragonstone"))
     }
     
     override func didDeactivate() {

@@ -35,7 +35,7 @@ class TweetInterfaceController: WKInterfaceController {
     override func didAppear() {
         print("TweetInterfaceController - \(#function)")
 
-        clearTwitterData()
+        //clearTwitterData()
         getTwitterData()
     }
     
@@ -54,48 +54,16 @@ class TweetInterfaceController: WKInterfaceController {
     //MARK: - Helper Methods
     
     func clearTwitterData() {
+        print("TweetInterfaceController - \(#function)")
+
         tweetTable.setHidden(true)
     }
     
     func getTwitterData() {
-        
+        print("TweetInterfaceController - \(#function)")
+
         loadingLabel.setHidden(false)
         startActivityIndicator()
-        
-        //Static data.
-        /*
-        delay(1) {
-            var validTweets = [Tweet]()
-            
-            let tweet1 = Tweet()
-            var user1 = User()
-            tweet1?.text = "Winter is coming!"
-            user1.screenName = "John Snow"
-            tweet1?.user = user1
-            if let tweet1 = tweet1 {
-                validTweets.append(tweet1)
-            }
-            let tweet2 = Tweet()
-            var user2 = User()
-            tweet2?.text = "I'm the queen of dragons!"
-            user2.screenName = "Daenerys Targaryen"
-            tweet2?.user = user2
-            if let tweet2 = tweet2 {
-                validTweets.append(tweet2)
-            }
-            
-            self.loadingLabel.setHidden(true)
-            self.tweetTable.setHidden(false)
-            self.stopActivityIndicator()
-            self.tweetTable.setNumberOfRows(validTweets.count, withRowType: "tweetRowController")
-            for (index, tweet) in validTweets.enumerated() {
-                if let row = self.tweetTable.rowController(at: index) as? TweetRowController {
-                    row.tweetLabel.setText(tweet.text)
-                    row.tweetImage.setImage(UIImage(named: "DaenerysTargaryen"))
-                }
-            }
-        }
-        */
         
         //Data from server.
         TwitterInterface().requestTwitterSearchResults(hashtag, completion: { (tweets, error) -> Void in
@@ -125,23 +93,64 @@ class TweetInterfaceController: WKInterfaceController {
             }
             else {
                 print(error.debugDescription)
+                self.populateWithStaticData()
             }
         })
         
     }
     
+    func populateWithStaticData() {
+        //Static data.
+        delay(1) {
+            var validTweets = [Tweet]()
+            
+            let staticTweets = [["Winter is coming!"        , "John Snow"         , "JohnSnow"         ],
+                                ["Hodor"                    , "Hodor"             , "Hodor"            ],
+                                ["Dragon stone rocks!"      , "The Team"          , "Dragonstone"      ],
+                                ["I'm the queen of dragons!", "Daenerys Targaryen", "DaenerysTargaryen"]]
+            
+            for staticTweet in staticTweets {
+                let tweet = Tweet()
+                var user = User()
+                tweet?.text = staticTweet[0]
+                user.screenName = staticTweet[1]
+                tweet?.user = user
+                if let tweet = tweet {
+                    validTweets.append(tweet)
+                }
+            }
+            
+            self.loadingLabel.setHidden(true)
+            self.tweetTable.setHidden(false)
+            self.stopActivityIndicator()
+            self.tweetTable.setNumberOfRows(validTweets.count, withRowType: "tweetRowController")
+            for (index, tweet) in validTweets.enumerated() {
+                if let row = self.tweetTable.rowController(at: index) as? TweetRowController {
+                    row.tweetLabel.setText(tweet.text)
+                    row.tweetImage.setImage(UIImage(named: staticTweets[index][2]))
+                }
+            }
+        }
+    }
+    
     func startActivityIndicator() {
+        print("TweetInterfaceController - \(#function)")
+
         activityIndicatorGroup.setHidden(false)
         activityIndicatorGroup.setBackgroundImageNamed("spinner")
         activityIndicatorGroup.startAnimatingWithImages(in: NSMakeRange(1,42), duration: 1.5, repeatCount: -1)
     }
     
     func stopActivityIndicator() {
+        print("TweetInterfaceController - \(#function)")
+
         activityIndicatorGroup.stopAnimating()
         activityIndicatorGroup.setHidden(true)
     }
 
     func delay(_ delay:Double, closure:@escaping ()->()) {
+        print("TweetInterfaceController - \(#function)")
+
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }

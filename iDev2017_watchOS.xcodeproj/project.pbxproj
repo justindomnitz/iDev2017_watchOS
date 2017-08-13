@@ -38,6 +38,7 @@
 		F5DFA5721F1BB62100610567 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA5701F1BB62100610567 /* libssl.a */; };
 		F5DFA5C01F1BB8F100610567 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA56F1F1BB62100610567 /* libcrypto.a */; };
 		F5DFA5C11F1BB8F100610567 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DFA5701F1BB62100610567 /* libssl.a */; };
+		F5EBCA2B1F407A7E00347CDD /* WhitewalkerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBCA2A1F407A7E00347CDD /* WhitewalkerInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		F5DFA5BD1F1BB76B00610567 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x509_vfy.h; path = Frameworks/openSSL/include/openssl/x509_vfy.h; sourceTree = "<group>"; };
 		F5DFA5BE1F1BB76C00610567 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x509.h; path = Frameworks/openSSL/include/openssl/x509.h; sourceTree = "<group>"; };
 		F5DFA5BF1F1BB76C00610567 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x509v3.h; path = Frameworks/openSSL/include/openssl/x509v3.h; sourceTree = "<group>"; };
+		F5EBCA2A1F407A7E00347CDD /* WhitewalkerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitewalkerInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 				F50C39951F1577B700109767 /* ComplicationController.swift */,
 				F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */,
 				F57C2B5F1F1A412C00501CA6 /* TweetRowController.swift */,
+				F5EBCA2A1F407A7E00347CDD /* WhitewalkerInterfaceController.swift */,
 				F56279271F1CD58100A1A6E3 /* Supporting Files */,
 				F57C2B561F1A40AE00501CA6 /* Twitter */,
 				F50C398D1F1577B700109767 /* Supporting Files */,
@@ -764,6 +767,7 @@
 				F56279261F1CD4A000A1A6E3 /* NetworkUtilities.swift in Sources */,
 				F57C2B5B1F1A40E400501CA6 /* Tweet.swift in Sources */,
 				F57C2B5E1F1A40FC00501CA6 /* TwitterInterface.swift in Sources */,
+				F5EBCA2B1F407A7E00347CDD /* WhitewalkerInterfaceController.swift in Sources */,
 				F57C2B5C1F1A40E400501CA6 /* User.swift in Sources */,
 				F57C2B551F1A3E9500501CA6 /* TweetInterfaceController.swift in Sources */,
 				F50C39901F1577B700109767 /* InterfaceController.swift in Sources */,
@@ -871,7 +875,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -923,7 +927,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -953,7 +957,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -977,7 +981,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -997,7 +1001,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1017,7 +1021,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1028,6 +1032,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = iDev2017_watchOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1050,6 +1055,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GBDZQKUR6E;
 				INFOPLIST_FILE = iDev2017_watchOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
