@@ -104,6 +104,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                 handler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
                 return
             }
+            
+            //to do
+            //let template = CLKComplicationTemplateExtraLargeSimpleText()
+            //template.textProvider = CLKRelativeDateTextProvider(date: Date(), style: .timer, units: [.minute, .second])
         }
         
         handler(nil)
@@ -176,16 +180,29 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getExtraLargeTemplate() -> CLKComplicationTemplate? {
-        let template = CLKComplicationTemplateModularLargeColumns()
-        template.row1Column1TextProvider = CLKSimpleTextProvider(text: "King's"   , shortText: "King's" )
-        template.row1Column2TextProvider = CLKSimpleTextProvider(text: ""         , shortText: ""       )
-        template.row2Column1TextProvider = CLKSimpleTextProvider(text: "Landing"  , shortText: "Land"   )
-        template.row2Column2TextProvider = CLKSimpleTextProvider(text: ""         , shortText: ""       )
-        template.row3Column1TextProvider = CLKSimpleTextProvider(text: ""         , shortText: "ing"    )
-        template.row3Column2TextProvider = CLKSimpleTextProvider(text: ""         , shortText: ""       )
-        template.row1ImageProvider = ComplicationConstants.CFASquareLogoModularImageProvider
+        let template = CLKComplicationTemplateExtraLargeColumnsText()
+        template.row1Column1TextProvider = CLKSimpleTextProvider(text: "Ki"   , shortText: "Ki" )
+        template.row1Column2TextProvider = CLKSimpleTextProvider(text: ""     , shortText: ""   )
+        template.row2Column1TextProvider = CLKSimpleTextProvider(text: "La"   , shortText: "La" )
+        template.row2Column2TextProvider = CLKSimpleTextProvider(text: ""     , shortText: ""   )
         template.column2Alignment = .trailing
         return template
+    }
+    
+    func activeTimerComplicationTemplate(for family: CLKComplicationFamily) -> CLKComplicationTemplate? {
+        switch family {
+        case .extraLarge:
+            break
+        default:
+            break
+        }
+        
+        return nil
+    }
+    
+    func inactiveTimerComplicationTemplate(for family: CLKComplicationFamily) -> CLKComplicationTemplate? {
+        
+        return nil
     }
     
 }

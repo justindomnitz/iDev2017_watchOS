@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import UserNotifications
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
@@ -14,6 +15,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         print("ExtensionDelegate - \(#function)")
 
         // Perform any final initialization of your application.
+        
+        UNUserNotificationCenter.current().delegate = self
         
         setExtensionBackgroundRefresh()
     }
@@ -62,6 +65,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             switch task {
             case let backgroundTask as WKApplicationRefreshBackgroundTask:
                 // Be sure to complete the background task once you’re done.
+                print("Here's where we should refresh Twitter data in the background!")
                 setExtensionBackgroundRefresh()
                 backgroundTask.setTaskCompletedWithSnapshot(true)
             case let snapshotTask as WKSnapshotRefreshBackgroundTask:
@@ -79,6 +83,14 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                 task.setTaskCompletedWithSnapshot(true)
             }
         }
+    }
+
+}
+
+extension ExtensionDelegate: UNUserNotificationCenterDelegate {
+ 
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
     }
 
 }

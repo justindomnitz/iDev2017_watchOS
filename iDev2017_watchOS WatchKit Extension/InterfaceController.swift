@@ -32,7 +32,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         print("InterfaceController - \(#function)")
         super.didAppear()
         
-        titleLabel.setText("Hello, Fleabottom!")
+        titleLabel.setText("Hello, Dragonstone!")
         titleImageView.setImage(UIImage(named: "Dragonstone"))
     }
     
@@ -40,19 +40,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         print("InterfaceController - \(#function)")
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-    }
-
-    @available(watchOSApplicationExtension 4.0, *)
-    @IBAction func orderButtonPressed() {
-        print("InterfaceController - \(#function)")
-        let orderPostURL = URL(string: "https://www.google.com/")!
-        
-        let session = NetworkUtilities() //.backgroundSession
-        _ = session.downloadTask(with: orderPostURL)
-        WKExtension.shared().isFrontmostTimeoutExtended = true
-        triggerFallbackLocalNotification()
-        WKInterfaceController.reloadRootPageControllers(withNames: ["orderController"],
-            contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
     
     func triggerFallbackLocalNotification() {
@@ -90,7 +77,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
                 WKExtension.shared().scheduleSnapshotRefresh(withPreferredDate: fireDate, userInfo: nil) { error in
                     // code
                 }
-                backgroundTask.setTaskCompleted()
+                backgroundTask.setTaskCompletedWithSnapshot(false)
             case let snapshotTask as WKSnapshotRefreshBackgroundTask:
                 // Snapshot tasks have a unique completion call, make sure to set // your expiration date
                 snapshotTask.setTaskCompleted(restoredDefaultState: true, estimatedSnapshotExpiration: Date.distantFuture, userInfo: nil)
@@ -98,5 +85,22 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
                 break
             }
         }
+    }
+    
+    // MARK: - Future - Settings Menu
+    
+    func settingsMenuItemSelected() {
+        //presentController(withName: "Settings", context: nil)
+    }
+    
+    // MARK: - Future - Haptic Feedback
+
+    func haptic() {
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 25 * 60) {
+            WKInterfaceDevice.current().play(.success)
+        }
+        
+        WKInterfaceDevice.current().play(.start)
     }
 }

@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import UserNotifications
 
 class TweetInterfaceController: WKInterfaceController {
 
@@ -73,6 +74,7 @@ class TweetInterfaceController: WKInterfaceController {
                     self.loadingLabel.setHidden(true)
                     self.tweetTable.setHidden(false)
                     self.stopActivityIndicator()
+                    //self.sendLocalNotification()
                     
                     if let validTweets = tweets {
                         self.tweets.removeAll()
@@ -153,6 +155,30 @@ class TweetInterfaceController: WKInterfaceController {
 
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
+    func sendLocalNotification() {
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (authorized, error) in
+            
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            
+            WKExtension.shared().isFrontmostTimeoutExtended = true
+            
+            if (authorized) {
+        
+                let content = UNMutableNotificationContent()
+                content.title = "Your highness!"
+                content.body = "Your tweets are ready."
+                content.sound = UNNotificationSound.default()
+                let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1, repeats: false)
+                let request = UNNotificationRequest.init(identifier: UUID().uuidString, content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                
+            }
+        }
     }
     
 }

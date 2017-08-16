@@ -24,8 +24,8 @@
 		F50C39961F1577B700109767 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50C39951F1577B700109767 /* ComplicationController.swift */; };
 		F50C39981F1577B700109767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50C39971F1577B700109767 /* Assets.xcassets */; };
 		F50C39AE1F157A6400109767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50C395B1F1577B600109767 /* Assets.xcassets */; };
+		F517C1F61F43B804006BC062 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F57013991F362A440008328F /* Reachability.m */; };
 		F56279261F1CD4A000A1A6E3 /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */; };
-		F570139B1F362A440008328F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F57013991F362A440008328F /* Reachability.m */; };
 		F570139D1F362B540008328F /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56279251F1CD4A000A1A6E3 /* NetworkUtilities.swift */; };
 		F57013A21F362C110008328F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57013A11F362C110008328F /* SystemConfiguration.framework */; };
 		F57C2B551F1A3E9500501CA6 /* TweetInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C2B541F1A3E9500501CA6 /* TweetInterfaceController.swift */; };
@@ -372,8 +372,6 @@
 		F57013971F362A1F0008328F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				F570139A1F362A440008328F /* Reachability.h */,
-				F57013991F362A440008328F /* Reachability.m */,
 				F56279241F1CD46F00A1A6E3 /* Network */,
 			);
 			path = Shared;
@@ -382,6 +380,8 @@
 		F570139F1F362BB30008328F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F570139A1F362A440008328F /* Reachability.h */,
+				F57013991F362A440008328F /* Reachability.m */,
 				F570139E1F362B740008328F /* iDev2017_watchOS-Bridging-Header.h */,
 				F50C395B1F1577B600109767 /* Assets.xcassets */,
 				F50C39601F1577B600109767 /* Info.plist */,
@@ -734,8 +734,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50C39571F1577B600109767 /* ViewController.swift in Sources */,
-				F570139B1F362A440008328F /* Reachability.m in Sources */,
 				F50C39551F1577B600109767 /* AppDelegate.swift in Sources */,
+				F517C1F61F43B804006BC062 /* Reachability.m in Sources */,
 				F570139D1F362B540008328F /* NetworkUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

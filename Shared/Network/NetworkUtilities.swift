@@ -13,7 +13,7 @@ import Foundation
     // Exclude SystemConfiguration framework
 #endif
 
-public class NetworkUtilities: NSObject, URLSessionTaskDelegate {
+public class NetworkUtilities: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate {
     
     let openSSLPublicKeyLength = 767
     let openSSLPublicKeyPrefix = "30 82 01 0A 02 82 01 01 00 "
@@ -42,11 +42,7 @@ public class NetworkUtilities: NSObject, URLSessionTaskDelegate {
     
     // MARK: Public Key Pinning Functions
     
-    open func downloadTask(with: URL) {
-        //to do
-    }
-    
-    open func sendRequest(_ request:URLRequest, completion: @escaping (_ json: AnyObject?, _ data: Data?, _ response: HTTPURLResponse?, _ error: NSError?) -> Void) {
+    func sendRequest(_ request:URLRequest, completion: @escaping (_ json: AnyObject?, _ data: Data?, _ response: HTTPURLResponse?, _ error: NSError?) -> Void) {
         
         let sessionConfig = URLSessionConfiguration.ephemeral
         let session = Foundation.URLSession(configuration: sessionConfig, delegate: self, delegateQueue: OperationQueue.main)
@@ -58,7 +54,25 @@ public class NetworkUtilities: NSObject, URLSessionTaskDelegate {
         .resume()
     }
     
-    open func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition,
+    func sendBackgroundRequest(_ request: URLRequest) {
+        let sessionConfig = URLSessionConfiguration.background(withIdentifier: UUID().uuidString)
+        let session = URLSession(configuration: sessionConfig, delegate: self, delegateQueue: OperationQueue.main)
+        let _ = session.dataTask(with: request).resume()
+    }
+    
+    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        print("NetworkingController - \(#function)")
+        
+        //to do
+    }
+    
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        print("NetworkingController - \(#function)")
+     
+        //to do
+    }
+    
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition,
         URLCredential?) -> Void) {
         
         // SSL Pinning - START
