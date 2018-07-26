@@ -35,22 +35,22 @@ open class Tweet : CustomStringConvertible
             let indices = data?.value(forKeyPath: TwitterKey.Entities.Indices) as? NSArray
             if let startIndex = (indices?.firstObject as? NSNumber)?.intValue {
                 if let endIndex = (indices?.lastObject as? NSNumber)?.intValue {
-                    let length = inText.characters.count
+                    let length = inText.count
                     if length > 0 {
                         let start = max(min(startIndex, length-1), 0)
                         let end = max(min(endIndex, length-1), 0)
                         if end > start {
-                            range = Range(uncheckedBounds: (inText.characters.index(inText.startIndex, offsetBy: start),
-                                                            inText.characters.index(inText.startIndex, offsetBy: end-1)))
-                            keyword = inText.substring(with: range)
+                            range = Range(uncheckedBounds: (inText.index(inText.startIndex, offsetBy: start),
+                                                            inText.index(inText.startIndex, offsetBy: end-1)))
+                            keyword = String(inText[range])
                             
                             //Placeholder initialization added here...
                             nsrange = inText.rangeOfString("", nearRange: NSMakeRange(0,0))
                             
                             if prefix != nil && !keyword.hasPrefix(prefix!) && start > 0 {
-                                range = Range(uncheckedBounds: (inText.characters.index(inText.startIndex, offsetBy: start-1),
-                                                                inText.characters.index(inText.startIndex, offsetBy: end-2)))
-                                keyword = inText.substring(with: range)
+                                range = Range(uncheckedBounds: (inText.index(inText.startIndex, offsetBy: start-1),
+                                                                inText.index(inText.startIndex, offsetBy: end-2)))
+                                keyword = String(inText[range])
                             }
                             if prefix == nil || keyword.hasPrefix(prefix!) {
                                 nsrange = inText.rangeOfString(keyword as NSString, nearRange: NSMakeRange(startIndex, endIndex-startIndex))

@@ -117,7 +117,7 @@ public class NetworkUtilities: NSObject, URLSessionTaskDelegate, URLSessionDataD
         //Remove the openSSL public key prefix.
         publicKey = publicKey.replacingOccurrences(of: openSSLPublicKeyPrefix, with: "")
         //Remove the openSSL public key suffix.
-        if publicKey.characters.count > openSSLPublicKeyLength {
+        if publicKey.count > openSSLPublicKeyLength {
             publicKey = String(publicKey[publicKey.startIndex..<publicKey.index(publicKey.startIndex, offsetBy: Int(openSSLPublicKeyLength))])
         }
         return publicKey
